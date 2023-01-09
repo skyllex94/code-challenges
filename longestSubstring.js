@@ -33,7 +33,7 @@ var lengthOfLongestSubstring = function (s) {
   return longestSubstring;
 };
 
-lengthOfLongestSubstring(" ");
+lengthOfLongestSubstring("sdflksd");
 
 // let bufferLongest = 0;
 // let buffer = "";
