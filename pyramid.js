@@ -6,4 +6,4 @@ function pyramid(n) {
   console.log(line);
 }
 
-pyramid(5);
+pyramid(10);
