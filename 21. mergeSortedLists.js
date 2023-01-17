@@ -14,6 +14,7 @@
 // ** ListNode => Head -> { val: "1", next: {val: "2", next: {val: "4", next: null}}}
 
 // ------------------------------------------------------------------------------------
+//  Working - beating only 5% in Runtime and Memory
 var mergeTwoLists = function (list1, list2) {
   if (!list1 && !list2) return list1;
 
@@ -76,7 +77,6 @@ function mergeLists(l1, l2, sum) {
     return sum;
   }
 }
-//  Working - beating only 5% in Runtime and Memory
 
 // Best Runtime solution
 var mergeTwoLists = function (list1, list2) {

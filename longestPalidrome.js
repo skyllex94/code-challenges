@@ -78,3 +78,62 @@ longestPalindrome("abasdfsddsf");
 //     }
 //     return lngst;
 //   };
+
+var isPalindrome = function (str) {
+  let left =
+    str.length % 2 === 1
+      ? Math.floor(str.length / 2)
+      : Math.floor(str.length / 2 - 1);
+  let right = Math.floor(str.length / 2);
+
+  const res = checkPalindrome(str, left, right);
+  console.log("res:", res);
+  return res;
+};
+
+function checkPalindrome(str, left, right) {
+  let result = false;
+  while (left >= 0 && right <= str.length) {
+    if (str[left] !== str[right]) {
+      result = false;
+      break;
+    } else if (str[left] === str[right] && left === 0) {
+      result = true;
+    }
+
+    left--;
+    right++;
+  }
+
+  return result;
+}
+
+// isPalindrome("daad");
+
+// Runtime - Beats 98%, Space - Beats %70
+var isPalindromeNum = function (num) {
+  let str = num.toString();
+  let left =
+    str.length % 2 === 1
+      ? Math.floor(str.length / 2)
+      : Math.floor(str.length / 2 - 1);
+  let right = Math.floor(str.length / 2);
+  console.log("left:", left);
+  console.log("right:", right);
+
+  const res = checkPali(left, right, str);
+  console.log("res:", res);
+  return res;
+};
+
+function checkPali(left, right, str) {
+  while (left >= 0 && right <= str.length) {
+    if (str[left] !== str[right]) return false;
+    if (str[left] === str[right] && left === 0) return true;
+
+    left--;
+    right++;
+  }
+}
+
+isPalindromeNum(112424211);
