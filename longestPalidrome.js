@@ -108,7 +108,20 @@ function checkPalindrome(str, left, right) {
   return result;
 }
 
-// isPalindrome("daad");
+// Amazing solution to the issue, simply reverse the str
+// and check if it equals the the original one - got the idea from the best result
+// and done the implementation myself
+
+var isPalindromeAmazing = function (str) {
+  if (str.length === 0) return false;
+  const reversed = str.split("").reverse().join("");
+  var result = str === reversed ? true : false;
+  return result;
+};
+
+isPalindromeAmazing("");
+
+// ----------------------------------------
 
 // Runtime - Beats 98%, Space - Beats %70
 var isPalindromeNum = function (num) {
@@ -136,4 +149,4 @@ function checkPali(left, right, str) {
   }
 }
 
-isPalindromeNum(112424211);
+// isPalindromeNum(112424211);
