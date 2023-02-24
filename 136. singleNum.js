@@ -16,6 +16,8 @@ var singleNumber2 = function (nums) {
   return Array.from(set);
 };
 
+singleNumber2([2, 1, 2, 2, 2, 3, 3, 4, 8]);
+
 var singleNumbereg = function (nums) {
   var total = 0;
 

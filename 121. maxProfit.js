@@ -14,6 +14,8 @@ var maxProfit = function (prices) {
   return max;
 };
 
+maxProfit([7, 1, 7, 15]);
+
 // Good hashmap approach, but having an exception case
 var maxProfit2 = function (prices) {
   let max = 0;

@@ -50,8 +50,9 @@ function check(curr, set) {
 // Runtime - >47%, Space >30%
 
 var hasCycle = function (head) {
-  var set = new Set();
   if (!head) return false;
+  var set = new Set();
+
   while (head.next) {
     if (set.has(head)) return true;
     set.add(head);

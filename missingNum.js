@@ -17,4 +17,20 @@ var missingNumber2 = function (nums) {
 };
 // Memory optimized solution
 
-missingNumber2([3, 0, 1]);
+for (let i = 0; i < arr.length; i++) {
+  if (!nums.includes(i)) console.log(i);
+}
+
+// Diffrent prepping solution
+function missingNums3(arr) {
+  const nums = [...arr];
+  nums.sort(function (a, b) {
+    return a - b;
+  });
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== nums[i + 1] - 1) return console.log(nums[i] + 1);
+  }
+}
+
+missingNums3([3, 0, 1, 2, 7]);
